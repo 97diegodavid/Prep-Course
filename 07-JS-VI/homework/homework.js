@@ -16,7 +16,7 @@ function mayuscula(nombre) {
    /*El método join() convierte un arreglo en un string, 
      uniendo todos los elementos de este en una misma cadena.*/
     
-   return nombre.charAt(0).toUpperCase() + nombre.slice(1);
+   return nombre.charAt(0).toUpperCase() + nombre.slice(1);      //hola 4 
    /*
    El método slice() devuelve una copia de una parte del array dentro 
    de un nuevo array empezando por inicio hasta fin (fin no incluido). */

@@ -22,7 +22,7 @@ function deObjetoAmatriz(objeto){
    return newArray;  */
   //return Object.entries(objeto).map(([clave,valor]) =>[clave ,valor]); 
    return Object.entries(objeto); 
-     
+       // hola 5 
   }
 
 
