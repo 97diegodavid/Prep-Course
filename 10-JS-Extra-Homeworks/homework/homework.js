@@ -10,19 +10,39 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
-  /*
-  let newArray  = [];
-  let keys = Object.keys(objeto);   // propiedades 
-  let values = Object.values(objeto); // valores 
+   let nuevo = [];
+   const  valores = Object.values(objeto);
+   const propiedades = []; 
+   for(let i = 0 ; i<valores.length; i++){
+        const valor = valores[i];
 
-    for(i=0;i<keys.length;i++){
-       newArray.push([keys[i],values[i]]);
-    }
-   console.log(newArray);
-   return newArray;  */
-  //return Object.entries(objeto).map(([clave,valor]) =>[clave ,valor]); 
-   return Object.entries(objeto); 
-       // hola 5 
+        for(let clave in objeto){
+            if(objeto.hasOwnProperty(clave) && objeto[clave]=== valor ){      
+                propiedades.push(clave); 
+            }
+                      // Asi se hace este ejercicio usando solamente con el metodo values 
+        }
+        nuevo.push([propiedades[i],valores[i]]);
+         
+   }
+   return nuevo ;  
+   /* La sentencia hasOwnProperty en JavaScript se utiliza para verificar si un objeto tiene una propiedad 
+      específica. Devuelve un valor booleano, true si el objeto tiene la propiedad y false si no.  */     
+
+  /*
+  let nuevo = [];
+  let K = Object.keys(objeto);    // Te da un arreglo con las propiedades del objeto 
+  let v = Object.values(objeto);  // Te da un arreglo con los valores de las propiedades del objeto ; 
+  for(let i =0 ; i<K.length; i++){
+      //nuevo.push([K[i],objeto[K[i]]]); 
+       nuevo.push([K[i],v[i]]); 
+        
+  }                         // Asi se hace este ejercicio usando los dos metodos , values y keys 
+  return nuevo ; */ 
+  
+   //return Object.entries(objeto);      // Usando el metodo entries 
+    //return Object.entries(objeto).map(([clave,valor]) =>[clave ,valor]);  // Otra manera de hacerlo 
+      
   }
 
 
